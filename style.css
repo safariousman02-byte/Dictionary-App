@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     display: flex;
@@ -24,10 +24,10 @@ body {
 }
 
 h1 {
-    font-size: 30px;
+    text-align: center;
     color: #333;
     margin-bottom: 20px;
-    text-align: center;
+    font-size: 28px;
 }
 
 .search-box {
@@ -41,7 +41,7 @@ h1 {
     padding: 12px;
     border: 2px solid #e0e0e0;
     border-radius: 10px;
-    font-size: 10px;
+    font-size: 16px;
     transition: border-color 0.3s;
 }
 
@@ -52,17 +52,17 @@ h1 {
 
 #searchBtn {
     padding: 12px 25px;
-    background: #667eee;
+    background: #667eea;
     color: white;
     border: none;
     border-radius: 10px;
-    font-size: 10px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+    font-size: 16px;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 #searchBtn:hover {
-    background: #5ac7db;
+    background: #5a67d8;
 }
 
 #result {
@@ -70,14 +70,15 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Word display */
 .word-card {
-    background: #f8f8f8;
+    background: #f8f9fa;
     padding: 20px;
     border-radius: 15px;
     border-left: 5px solid #667eea;
 }
 
-.word-card h2{
+.word-card h2 {
     color: #333;
     font-size: 24px;
     margin-bottom: 5px;
@@ -89,7 +90,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-.word-card .example {
+.word-card .meaning {
     color: #333;
     line-height: 1.6;
 }
@@ -98,27 +99,44 @@ h1 {
     color: #666;
     font-style: italic;
     margin-top: 10px;
+    padding: 10px;
     background: #f0f0f0;
     border-radius: 5px;
 }
 
 .word-card .part-of-speech {
     display: inline-block;
-    color: white;
     background: #667eea;
+    color: white;
     padding: 3px 10px;
     border-radius: 20px;
     font-size: 12px;
     margin-top: 5px;
 }
 
-#history {
-    border-top: 2 solid #f0f0f0;
+/* Status messages */
+#status {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+.status-loading {
+    color: #667eea !important;
+}
+
+.status-error {
+    color: #e53e3e !important;
+}
+
+/* History */
+.history {
+    border-top: 2px solid #f0f0f0;
     padding-top: 15px;
 }
 
-#history, h3 {
-    color: blue;
+.history h3 {
+    color: #666;
     font-size: 14px;
     margin-bottom: 10px;
 }
@@ -143,30 +161,16 @@ h1 {
     background: #e0e0e0;
 }
 
-#status {
-    text-align: center;
-    color: #666;
-    padding: 20px;
-}
-
-.status-loading {
-    color: #667eea !important;
-}
-
-.status-error {
-    color: #e53e3e !important;
-}
-
-
-
+/* Responsive */
 @media (max-width: 480px) {
     .container {
         padding: 20px;
     }
+    
     .search-box {
         flex-direction: column;
     }
-
+    
     #searchBtn {
         width: 100%;
     }
