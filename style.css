@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#wordInput {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 10px;
+    transition: border-color 0.3s;
+}
+
+#wordInput:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+#searchBtn {
+    padding: 12px 25px;
+    background: #667eee;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 10px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#searchBtn:hover {
+    background: #5ac7db;
+}
+
+#result {
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+
+.word-card {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 5px solid #667eea;
+}
+
+.word-card h2{
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.word-card .phonetic {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.word-card .example {
+    color: #333;
+    line-height: 1.6;
+}
+
+.word-card .example {
+    color: #666;
+    font-style: italic;
+    margin-top: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
+.word-card .part-of-speech {
+    display: inline-block;
+    color: white;
+    background: #667eea;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+#history {
+    border-top: 2 solid #f0f0f0;
+    padding-top: 15px;
+}
+
+#history, h3 {
+    color: blue;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#historyList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#historyList li {
+    background: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#historyList li:hover {
+    background: #e0e0e0;
+}
+
+#status {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+.status-loading {
+    color: #667eea !important;
+}
+
+.status-error {
+    color: #e53e3e !important;
+}
+
+
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    .search-box {
+        flex-direction: column;
+    }
+
+    #searchBtn {
+        width: 100%;
+    }
+}
